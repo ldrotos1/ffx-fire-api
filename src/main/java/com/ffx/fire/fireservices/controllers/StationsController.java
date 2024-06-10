@@ -1,21 +1,24 @@
 package com.ffx.fire.fireservices.controllers;
 
 import java.util.List;
-import java.util.ArrayList;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ffx.fire.fireservices.models.StationListItem;
+import com.ffx.fire.fireservices.services.StationService;
+
 @RestController
+@RequestMapping("stations")
 public class StationsController {
 
-	@GetMapping("/stations")
-	public List<String> getStations() {
-		List<String> stations = new ArrayList<String>();
-		stations.add("Station 1");
-		stations.add("Station 2");
-		stations.add("Station 3");
-		stations.add("Station 4");
-		return stations;
+	@Autowired
+	private StationService stationService;
+	
+	@GetMapping("/list")
+	public List<StationListItem> getStations() {
+		return stationService.getStationList();
 	}
 }
