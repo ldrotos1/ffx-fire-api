@@ -1,4 +1,4 @@
-# ffx-fire-api
-The backend service layer for the Fairfax County Fire and Rescue management application.
+# ffx-fire-services
+The backend services layer for the Fairfax County Fire and Rescue management application.
 
 ## Requirements
