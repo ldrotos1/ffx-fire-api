@@ -1,1 +1,3 @@
-rootProject.name = 'fire-services'
+include ':api'
+include ':services:station-service'
+include ':models'
