@@ -1,4 +1,4 @@
 # ffx-fire-services
-Service layer code for the Fairfax County Fire and Rescue management application.
+The backend services layer for the Fairfax County Fire and Rescue management application.
 
 ## Requirements
